@@ -1,4 +1,3 @@
-require("traceur");
 var es6 = {};
 es6.arrow = (x) => x * x;
 es6.gen = function(){
