@@ -1,0 +1,35 @@
+> How to setup your ES6 LAB?
+
+* git clone https://github.com/hemanth/es6-lab-setup.git
+
+* cd es6-lab-setup
+
+* npm install 
+
+* grunt watch
+
+That would watch for any changes in `js` and `spec` dir and fire a `traceur` and `jasmine` task.
+
+
+__Sample usage:__
+
+![](/image/es6-lab.gif)
+
+
+__TODO :__
+
+Provide support for the below with shims or by exploring `traceur` flags:
+
+* Module.
+
+* Proxy.
+
+* Map, Set, WeakMap. 
+
+* Object Observe. 
+
+* Rest and spread.
+
+Also take care of errors from `gulp-traceur`.
+
+

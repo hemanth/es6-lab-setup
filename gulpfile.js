@@ -1,18 +1,14 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
-    traceur = require('gulp-traceur');
-    shell = require('gulp-shell')
-    jasmine = require('gulp-jasmine');
+    traceur = require('gulp-traceur'),
+    shell = require('gulp-shell'),
+    jasmine = require('gulp-jasmine'),
+    plumber = require('gulp-plumber');
 
-var domain = require('domain').create();
-domain.on('error', function(err){
-  log('Errored due to', chalk.bgRed.bold(err.message), errorBeep);
-  gulp.run('watch');
-});
 
 gulp.task('traceur', function () {
     return gulp.src('js/**/*.js')
-        .pipe(traceur({sourceMap: true}))
+        .pipe(traceur({sourceMap: true,experimental: true}))
         .pipe(gulp.dest('dist'));
 });
 
