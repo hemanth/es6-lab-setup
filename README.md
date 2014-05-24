@@ -32,4 +32,5 @@ Provide support for the below with shims or by exploring `traceur` flags:
 
 Also take care of errors from `gulp-traceur`.
 
+More ES6 recpies at [paws-on-es6](https://github.com/hemanth/paws-on-es6)
 
