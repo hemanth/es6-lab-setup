@@ -73,4 +73,13 @@ es6.symbols = function(value){
   return object[s];
 };
 
+es6.maps = function(answer, unset=true){
+  let m = new Map();
+  m.set('answer', answer);
+  if(unset) {
+    m.delete('answer');
+  }
+  return m.has('answer');
+}
+
 module.exports = es6;

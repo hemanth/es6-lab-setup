@@ -58,4 +58,10 @@ describe("ES6 suite", function() {
 
   });
 
+  it("to test presence of answer", function(){
+    expect(es6.maps(42)).toBe(false);
+    expect(es6.maps(42, false)).toBe(true);
+  });
+
+
 });
