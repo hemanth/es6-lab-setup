@@ -13,7 +13,7 @@ That would watch for any changes in `js` and `spec` dir and fire a `traceur` and
 
 __Sample usage:__
 
-![](/image/es6-lab.gif)
+![](/images/es6-lab.gif)
 
 
 __TODO :__
