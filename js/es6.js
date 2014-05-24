@@ -66,4 +66,11 @@ es6.spreadData = function (n) {
   return spreadedArray;
 }
 
+es6.symbols = function(value){
+  var s = Symbol("catname");
+  var object = {};
+  object[s] = value;
+  return object[s];
+};
+
 module.exports = es6;

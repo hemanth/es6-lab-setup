@@ -52,4 +52,10 @@ describe("ES6 suite", function() {
     expect(es6.spreadData([2,3,4]).join(",")).toBe("1,2,3,4,5");
   });
 
+  it("should give the name of cat", function(){
+
+    expect(es6.symbols("milly")).toBe("milly");
+
+  });
+
 });
