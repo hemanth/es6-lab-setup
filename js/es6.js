@@ -11,7 +11,7 @@ es6.ArrayComprehension = function (){
 }
 
 // Block scope
-es6.blockBinding = function (){ 
+es6.blockBinding = function (){
   {
     var wife = 1;
     let gfs = 10;
@@ -30,7 +30,7 @@ es6.destructuring = function (){
   return foo+bar;
 }
 
-// for of 
+// for of
 es6.forOf = function(nums) {
   let sum = 0;
   for (let element of nums) {
@@ -42,13 +42,44 @@ es6.forOf = function(nums) {
 // Generator function.
 es6.gen = function(){
   var traceur = require("traceur");
-  return function *Counter(){
+  var counterFn = function *Counter(){
     var n = 0;
     while(1<2) {
       yield n;
       ++n;
     }
   };
+  return (new counterFn());
 };
+
+es6.objectObserve = function(obj, changeFn) {
+  // Gone to ES7
+  // Object.observe(obj, changeFn);
+}
+
+es6.sortRestArgs = function (...theArgs){
+  return theArgs.sort();
+}
+
+es6.spreadData = function (n) {
+  var spreadedArray = [1,...n,5];
+  return spreadedArray;
+}
+
+es6.symbols = function(value){
+  var s = Symbol("catname");
+  var object = {};
+  object[s] = value;
+  return object[s];
+};
+
+es6.maps = function(answer, unset=true){
+  let m = new Map();
+  m.set('answer', answer);
+  if(unset) {
+    m.delete('answer');
+  }
+  return m.has('answer');
+}
 
 module.exports = es6;
