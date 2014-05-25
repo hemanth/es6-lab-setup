@@ -24,11 +24,7 @@ Provide support for the below with shims or by exploring `traceur` flags:
 
 * Proxy.
 
-* Map, Set, WeakMap. 
-
-* Object Observe. 
-
-* Rest and spread.
+* WeakMap. 
 
 Also take care of errors from `gulp-traceur`.
 
