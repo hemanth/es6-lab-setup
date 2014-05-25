@@ -1,3 +1,9 @@
+> What the hell is this?
+
+Simply put it's a place where you code in ES6 which gets converted to ES5 on the fly along with jasmine test.
+
+ES6 => ECMAScript6
+
 > How to setup your ES6 LAB?
 
 * git clone https://github.com/hemanth/es6-lab-setup.git
