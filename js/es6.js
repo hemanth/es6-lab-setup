@@ -73,13 +73,24 @@ es6.symbols = function(value){
   return object[s];
 };
 
-es6.maps = function(answer, unset=true){
+es6.map = function(answer, unset=true){
   let m = new Map();
   m.set('answer', answer);
   if(unset) {
     m.delete('answer');
   }
   return m.has('answer');
-}
+};
+
+es6.objLiteral = function () {
+  var x = -10;
+  var y = 10;
+
+  return {x, y};
+};
+
+es6.tmplLiteral = function(name="hemanth"){
+  return `hello ${name}`;
+};
 
 module.exports = es6;

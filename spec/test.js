@@ -53,15 +53,20 @@ describe("ES6 suite", function() {
   });
 
   it("should give the name of cat", function(){
-
     expect(es6.symbols("milly")).toBe("milly");
-
   });
 
   it("to test presence of answer", function(){
-    expect(es6.maps(42)).toBe(false);
-    expect(es6.maps(42, false)).toBe(true);
+    expect(es6.map(42)).toBe(false);
+    expect(es6.map(42, false)).toBe(true);
   });
 
+  it("should return an object", function() {
+    expect(es6.objLiteral()).toEqual({ x : -10, y : 10 });
+  });
+
+  it("should do some template manipulation", function() {
+    expect(es6.tmplLiteral('world')).toEqual('hello world');
+  });
 
 });
