@@ -6,6 +6,7 @@
     "gulp-shell": "^0.2.5",
     "gulp-traceur": "^0.6.0",
     "gulp-watch": "^0.6.5",
-    "minijasminenode": "^0.4.0"
+    "minijasminenode": "^0.4.0",
+    "colors" : "^0.6.2"
   }
 }

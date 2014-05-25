@@ -1,4 +1,5 @@
 var gulp = require('gulp'),
+    colors = require('colors'),
     watch = require('gulp-watch'),
     traceur = require('gulp-traceur'),
     shell = require('gulp-shell'),
@@ -7,11 +8,17 @@ var gulp = require('gulp'),
 
 
 gulp.task('traceur', function () {
+    var trace = traceur({sourceMap: true,experimental: true})
+            .on("error", function(err){
+              console.error("\n\n===Error occured while compiling in traceur===".red);
+              console.error(err.message.red);
+              console.error("\n\n==============================================\n\n".red);
+              trace.end();
+            });
     return gulp.src('js/**/*.js')
-        .pipe(traceur({sourceMap: true,experimental: true}))
+        .pipe(trace)
         .pipe(gulp.dest('dist'));
 });
-
 /*gulp.task('jasmine', function () {
     gulp.src('spec/test.js')
         .pipe(jasmine({verbose: true}));
@@ -26,5 +33,6 @@ gulp.task('watch', ['traceur','jasmine'], function() {
   gulp.watch('js/**/*.js', ['traceur']);
   gulp.watch('js/**/*.js', ['jasmine']);
   gulp.watch('spec/*.js', ['jasmine']);
+
 });
 
