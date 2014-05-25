@@ -6,7 +6,7 @@
 
 * npm install 
 
-* grunt watch
+* gulp watch
 
 That would watch for any changes in `js` and `spec` dir and fire a `traceur` and `jasmine` task.
 
