@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-    colors = require('colors'),
+    chalk = require('chalk'),
     watch = require('gulp-watch'),
     traceur = require('gulp-traceur'),
     shell = require('gulp-shell'),
@@ -10,12 +10,13 @@ var gulp = require('gulp'),
 gulp.task('traceur', function () {
     var trace = traceur({sourceMap: true,experimental: true})
             .on("error", function(err){
-              console.error("\n\n===Error occured while compiling in traceur===".red);
-              console.error(err.message.red);
-              console.error("\n\n==============================================\n\n".red);
+              console.error(chalk.red("\n\n===Error occured while compiling in traceur==="));
+              console.error(chalk.red(err.message));
+              console.error(chalk.red("\n\n==============================================\n\n"));
               trace.end();
             });
     return gulp.src('js/**/*.js')
+        .pipe(plumber())
         .pipe(trace)
         .pipe(gulp.dest('dist'));
 });
