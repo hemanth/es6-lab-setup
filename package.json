@@ -8,6 +8,6 @@
     "gulp-sourcemaps": "~1.2.8",
     "gulp-6to5": "~1.0.2"
   },"scripts": {
-    "test": "gulp jasmine"
+    "test": "gulp 6to5 && gulp jasmine"
   }
 }
