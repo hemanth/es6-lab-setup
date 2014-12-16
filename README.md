@@ -1,3 +1,5 @@
+![](https://travis-ci.org/hemanth/es6-lab-setup.svg?branch=master)
+
 > What the hell is this?
 
 Simply put it's a place where you code in ES6 which gets converted to ES5 on the fly along with jasmine test.
