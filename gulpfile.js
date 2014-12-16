@@ -24,6 +24,5 @@ gulp.task('default', ['6to5','jasmine'], function() {
   gulp.watch('js/**/*.js', ['6to5']);
   gulp.watch('js/**/*.js', ['jasmine']);
   gulp.watch('spec/*.js', ['jasmine']);
-
 });
 

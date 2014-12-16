@@ -5,7 +5,7 @@ describe("ES6 suite", function() {
     expect(es6.arrow(2)).toBe(4);
   });
 
-  xit("should give a count value", function() {
+  it("should give a count value", function() {
      var countr = new es6.gen();
      expect(countr.next().value).toBe(0);
      expect(countr.next().value).toBe(1);
