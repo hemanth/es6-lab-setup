@@ -5,7 +5,7 @@ describe("ES6 suite", function() {
     expect(es6.arrow(2)).toBe(4);
   });
 
-  it("should give a count value", function() {
+  xit("should give a count value", function() {
      var countr = new es6.gen();
      expect(countr.next().value).toBe(0);
      expect(countr.next().value).toBe(1);
@@ -33,15 +33,15 @@ describe("ES6 suite", function() {
     expect(es6.forOf([1,2,3])).toBe(6);
   });
 
-  it("should return the changed value", function() {
-    // var obj = {};
-    // var changeFn = function(changes){
-    //   console.log(changes);
-    //   return changes;
-    // };
-    // es6.objectObserve(obj, changeFn);
+  xit("should return the changed value", function() {
+     var obj = {};
+     var changeFn = function(changes){
+       console.log(changes);
+       return changes;
+     };
+     es6.objectObserve(obj, changeFn);
 
-    // obj.name = "test";
+     obj.name = "test";
   });
 
   it("should sort the passed list", function() {

@@ -41,7 +41,6 @@ es6.forOf = function(nums) {
 
 // Generator function.
 es6.gen = function(){
-  var traceur = require("traceur");
   var counterFn = function *Counter(){
     var n = 0;
     while(1<2) {

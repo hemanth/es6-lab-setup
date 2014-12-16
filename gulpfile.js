@@ -1,37 +1,27 @@
 var gulp = require('gulp'),
-    chalk = require('chalk'),
     watch = require('gulp-watch'),
-    traceur = require('gulp-traceur'),
     shell = require('gulp-shell'),
     jasmine = require('gulp-jasmine'),
-    plumber = require('gulp-plumber');
+    sourcemaps = require('gulp-sourcemaps');
+    to5 = require('gulp-6to5');
 
-
-gulp.task('traceur', function () {
-    var trace = traceur({sourceMap: true,experimental: true})
-            .on("error", function(err){
-              console.error(chalk.red("\n\n===Error occured while compiling in traceur==="));
-              console.error(chalk.red(err.message));
-              console.error(chalk.red("\n\n==============================================\n\n"));
-              trace.end();
-            });
+gulp.task('6to5', function () {
     return gulp.src('js/**/*.js')
-        .pipe(plumber())
-        .pipe(trace)
+        .pipe(sourcemaps.init())
+        .pipe(to5({
+            experimental: true
+        }))
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist'));
 });
-/*gulp.task('jasmine', function () {
-    gulp.src('spec/test.js')
-        .pipe(jasmine({verbose: true}));
-});*/
 
 gulp.task('jasmine', function() {
- gulp.src('spec/*.js')
-  .pipe(shell('minijasminenode spec/test.js')).on('error', function(){});
+ return gulp.src('spec/test.js')
+        .pipe(jasmine());
 });
 
-gulp.task('watch', ['traceur','jasmine'], function() {
-  gulp.watch('js/**/*.js', ['traceur']);
+gulp.task('default', ['6to5','jasmine'], function() {
+  gulp.watch('js/**/*.js', ['6to5']);
   gulp.watch('js/**/*.js', ['jasmine']);
   gulp.watch('spec/*.js', ['jasmine']);
 
