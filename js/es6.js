@@ -1,3 +1,5 @@
+require("6to5/polyfill");
+
 var es6 = {};
 
 // Arrow function.

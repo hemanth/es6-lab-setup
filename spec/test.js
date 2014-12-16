@@ -1,4 +1,5 @@
 var es6 = require("../dist/es6.js");
+
 describe("ES6 suite", function() {
 
   it("should sq the number", function() {
