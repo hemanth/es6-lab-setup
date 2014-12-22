@@ -2,7 +2,7 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     shell = require('gulp-shell'),
     jasmine = require('gulp-jasmine'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
     to5 = require('gulp-6to5');
 
 gulp.task('6to5', function () {
