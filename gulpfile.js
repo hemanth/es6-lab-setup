@@ -1,6 +1,5 @@
 var gulp = require('gulp'),
     watch = require('gulp-watch'),
-    shell = require('gulp-shell'),
     jasmine = require('gulp-jasmine'),
     sourcemaps = require('gulp-sourcemaps'),
     traceur = require('gulp-traceur'),
