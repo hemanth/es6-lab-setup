@@ -2,7 +2,8 @@ var gulp = require('gulp'),
     watch = require('gulp-watch'),
     shell = require('gulp-shell'),
     jasmine = require('gulp-jasmine'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    traceur = require('gulp-traceur'),
     to5 = require('gulp-6to5');
 
 gulp.task('6to5', function () {
@@ -10,6 +11,19 @@ gulp.task('6to5', function () {
         .pipe(sourcemaps.init())
         .pipe(to5({
             experimental: true
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('traceur', function() {
+    return gulp.src('js/**/*.js')
+        .pipe(sourcemaps.init())
+        .pipe(traceur({ 
+            blockBinding: true, 
+            experimental: true,
+            arrayComprehension: true,
+            types: true
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist'));

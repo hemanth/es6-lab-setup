@@ -16,9 +16,9 @@ ES6 => ECMAScript6
 
 * gulp
 
-That would watch for any changes in `js` and `spec` dir and fire a `6to5` and `jasmine` task.
+That would watch for any changes in `js` and `spec` dir and fire a `6to5` or `traceur` and `jasmine` task.
 
-
+P.S: You may use `gulp 6to5` or `gulp traceur` as per your need, defaults to `6to5`.
 __Sample usage:__
 
 ![](/images/es6-lab.gif)
