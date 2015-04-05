@@ -12,17 +12,16 @@ ES6 => ECMAScript6
 
 * cd es6-lab-setup
 
-* npm install 
+* npm install
 
 * gulp
 
-That would watch for any changes in `js` and `spec` dir and fire a `6to5` or `traceur` and `jasmine` task.
+That would watch for any changes in `js` and `spec` dir and fire a `babel` or `traceur` and `jasmine` task.
 
-P.S: You may use `gulp 6to5` or `gulp traceur` as per your need, defaults to `6to5`.
+P.S: You may use `gulp babel` or `gulp traceur` as per your need, defaults to `babel`.
 __Sample usage:__
 
 ![](/images/es6-lab.gif)
 
 
 More ES6 recpies at [paws-on-es6](https://github.com/hemanth/paws-on-es6)
-

@@ -1,4 +1,4 @@
-require("6to5/polyfill");
+require("babel/polyfill");
 require('traceur/bin/traceur-runtime');
 
 var es6 = {};
