@@ -3,13 +3,14 @@ var gulp = require('gulp'),
     jasmine = require('gulp-jasmine'),
     sourcemaps = require('gulp-sourcemaps'),
     traceur = require('gulp-traceur'),
-    to5 = require('gulp-6to5');
+    to5 = require('gulp-babel');
 
-gulp.task('6to5', function () {
+gulp.task('babel', function () {
     return gulp.src('js/**/*.js')
         .pipe(sourcemaps.init())
         .pipe(to5({
-            experimental: true
+            stage: 0,
+            loose: 'all'
         }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('dist'));
@@ -18,8 +19,8 @@ gulp.task('6to5', function () {
 gulp.task('traceur', function() {
     return gulp.src('js/**/*.js')
         .pipe(sourcemaps.init())
-        .pipe(traceur({ 
-            blockBinding: true, 
+        .pipe(traceur({
+            blockBinding: true,
             experimental: true,
             arrayComprehension: true,
             types: true
@@ -33,9 +34,8 @@ gulp.task('jasmine', function() {
         .pipe(jasmine());
 });
 
-gulp.task('default', ['6to5','jasmine'], function() {
-  gulp.watch('js/**/*.js', ['6to5']);
+gulp.task('default', ['babel','jasmine'], function() {
+  gulp.watch('js/**/*.js', ['babel']);
   gulp.watch('js/**/*.js', ['jasmine']);
   gulp.watch('spec/*.js', ['jasmine']);
 });
-
