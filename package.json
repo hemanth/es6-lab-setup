@@ -1,16 +1,20 @@
 {
   "dependencies": {
-    "babel": "^5.0.8",
+    "babel": "^6.0.0",
     "gulp": "^3.8.11",
-    "gulp-babel": "^5.0.0",
+    "gulp-babel": "^6.0.0",
     "gulp-jasmine": "^2.0.1",
     "gulp-sourcemaps": "~1.5.1",
     "gulp-traceur": "^0.17.0",
     "gulp-watch": "^4.2.3",
-    "traceur": "0.0.87"
+    "traceur": "0.0.103",
+    "snyk": "^1.21.2"
   },
   "scripts": {
     "test": "gulp babel && gulp jasmine",
-    "test2": "gulp traceur && gulp jasmine"
-  }
+    "test2": "gulp traceur && gulp jasmine",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
