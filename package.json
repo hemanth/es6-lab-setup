@@ -3,7 +3,7 @@
     "babel": "^6.0.0",
     "gulp": "^3.8.11",
     "gulp-babel": "^6.0.0",
-    "gulp-jasmine": "^2.0.1",
+    "gulp-jasmine": "^4.0.0",
     "gulp-sourcemaps": "~1.5.1",
     "gulp-traceur": "^0.17.0",
     "gulp-watch": "^4.2.3",
