@@ -1,5 +1,7 @@
-version: v1.5.0
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
 ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
 patch:
   'npm:minimatch:20160620':
     - gulp > vinyl-fs > glob-stream > glob > minimatch:
@@ -10,3 +12,62 @@ patch:
         patched: '2016-12-02T03:57:00.427Z'
     - gulp > vinyl-fs > glob-watcher > gaze > globule > glob > minimatch:
         patched: '2016-12-02T03:57:00.427Z'
+  SNYK-JS-LODASH-567746:
+    - gulp-babel > babel-core > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-generator > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-traverse > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-template > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-generator > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-template > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-generator > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-traverse > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-template > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-generator > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-traverse > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-template > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-template > babel-traverse > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
+    - gulp-babel > babel-core > babel-register > babel-core > babel-helpers > babel-template > babel-traverse > babel-types > lodash:
+        patched: '2020-05-01T07:10:06.878Z'
